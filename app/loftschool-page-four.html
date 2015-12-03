@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/style-four.css">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=1201, initial-scale=1">
+		<!--[if it IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1/4/2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="main">
+				<div class="main-center clearfix">
+					<div class="enter">
+						<div class="enter-authorization">Авторизируйтесь</div>
+						<form action="/echo" method="post">
+							<div class="form">
+								<p class="enter-login">
+								<label for="login">Login</label>
+									<i class="icon icon-login"></i>
+									<input type="text" name="login" placeholder="Введите Email" id="login" class="required-mail">
+								</p>
+								<p class="enter-password">
+									<input type="password" name="password" placeholder="Введите пароль" id="password-field" class="required-pass">
+								</p>
+								<p class="main-me">
+									<input type="checkbox" id="rem" checked>
+									<label for="rem">Запомнить меня?</label>
+								</p>
+								<a href="#" class="button">Войти</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="main-footer">
+			<div class="general-footer clearfix">
+				<div class="footer-lock">
+					<a href="#" class="lock">вход</a>
+				</div>
+				<p class="footer-my-site">&#169;2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.</p>
+			</div>
+		</footer>
+	</body>
+</html>

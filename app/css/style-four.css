@@ -1,0 +1,237 @@
+.enter{
+	width: 250px;
+    height: 250px;
+    margin-left: 35%;
+    margin-top:10%;
+    margin-bottom:30%;
+}
+ .enter-authorization{
+ 	font-family: 'open_sanslight';
+ 	font-size: 14px;
+ 	color: #727070;
+ 	margin-bottom: 5px;
+ 	margin-left: 20px;
+ }
+.enter form{
+ 	width: 335px;
+ 	height: 283px;
+ 	border-radius: 5px;
+ 	border: 1px solid #c1c1c1;
+ 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8f7f6+0,f0eeed+100 */
+	background: rgb(248,247,246); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(248,247,246,1) 0%, rgba(240,238,237,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(248,247,246,1) 0%,rgba(240,238,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(248,247,246,1) 0%,rgba(240,238,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f7f6', endColorstr='#f0eeed',GradientType=0 ); /* IE6-9 */
+ }
+.icon-login:before { 
+	content: url("../img/mail-arrow.png"); 
+}
+.icon-login {
+  position:absolute; 
+  left:10px;
+ }
+.enter-login {
+	position:relative;
+}
+label {
+  color: transparent;
+  font-size: 1px;
+  position: absolute;
+  visibility: hidden;
+}
+.form input[type=text],
+.form input[type=password]{
+width: 255px;
+  padding:10px 10px 10px 55px;
+margin-left: 7px;
+ 	border-radius: 5px;
+ 	border: 1px solid #d6d5d3;
+ 	min-height: 20px;
+}
+
+
+
+
+
+
+
+
+/*.required-mail{
+	margin-top: 22px;
+ 	width: 255px;
+ 	min-height: 40px;
+ 	border-radius: 5px;
+ 	border: 1px solid #d6d5d3;
+ 	margin-left: 37px;
+ 	position: relative;
+ }*/
+
+.required-mail::-webkit-input-placeholder {
+	font-size: 12px;
+	font-family: 'open_sanslight';
+	color: #c7c6c6;
+}
+.required-mail::-moz-placeholder{
+	font-size: 12px;
+	font-family: 'open_sanslight';
+	color: #c7c6c6;
+	}/* Firefox 19+ */
+.required-mail:-moz-placeholder{
+	font-size: 12px;
+	font-family: 'open_sanslight';
+	color: #c7c6c6;
+	}/* Firefox 18- */
+.required-mail:-ms-input-placeholder{
+	font-size: 12px;
+	font-family: 'open_sanslight';
+	color: #c7c6c6;
+}
+/*.required-mail::-webkit-input-placeholder:before {
+    content: url("../img/mail-arrow.png");
+    position: absolute;
+    top: 0;
+	left: 0;
+	margin-left: 15px;
+}
+.required-mail:-moz-placeholder:before {
+	content: url("../img/mail-arrow.png");
+	position: absolute;
+    top: 0;
+	left: 0;
+	margin-left: 15px;
+}
+.required-mail::-moz-placeholder:before {
+    position: absolute;
+    top: 0;
+	left: 0;
+	margin-left: 15px;
+	content: url("../img/mail-arrow.png");
+}
+.required-mail:-ms-input-placeholder:before {
+    position: absolute;
+    top: 0;
+	left: 0;
+	margin-left: 15px;
+	content: url("../img/mail-arrow.png");
+}
+.required-pass{
+ 	width: 255px;
+ 	min-height: 40px;
+ 	border-radius: 5px;
+ 	border: 1px solid #d6d5d3;
+ 	margin-left: 37px;	
+ 	position: relative;
+}
+.required-pass::-webkit-input-placeholder {
+	padding-left: 70px;
+	font-size: 12px;
+	font-family: 'open_sanslight';
+	color: #c7c6c6;
+}
+.required-pass::-moz-placeholder {
+	padding-left: 70px;
+	font-size: 12px;
+	font-family: 'open_sanslight';
+	color: #c7c6c6;
+	}/* Firefox 19+ */
+.required-pass:-moz-placeholder {
+	padding-left: 70px;
+	font-size: 12px;
+	font-family: 'open_sanslight';
+	color: #c7c6c6;
+	}/* Firefox 18- */
+.required-pass:-ms-input-placeholder{
+	padding-left: 70px;
+	font-size: 12px;
+	font-family: 'open_sanslight';
+	color: #c7c6c6;
+}
+.required-pass::-webkit-input-placeholder:before {
+    content: url("../img/key-arrow.png");
+    position: absolute;
+    top: 0;
+	left: 0;
+	margin-left: 15px;
+}
+.required-pass:-moz-placeholder:before {
+	content: url("../img/key-arrow.png");
+	position: absolute;
+    top: 0;
+	left: 0;
+	margin-left: 15px;
+}
+.required-pass::-moz-placeholder:before {
+    position: absolute;
+    top: 0;
+	left: 0;
+	margin-left: 15px;
+	content: url("../img/key-arrow.png");
+}
+.required-pass:-ms-input-placeholder:before {
+    position: absolute;
+    top: 0;
+	left: 0;
+	margin-left: 15px;
+	content: url("../img/key-arrow.png");
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+.main-me label{
+	color: #727070;
+}
+input[type="checkbox"] + label{
+	margin-left: 37px;
+    height: 18px;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+input[type="checkbox"] + label::before{
+    content: url("../img/checkbox.png");
+    margin-right: 10px;
+    
+}
+input[type="checkbox"]:checked + label::before{
+    content: url("../img/checked.png");
+    margin-right: 10px;
+}
+.button{
+	display: block;
+	text-align: center;
+	padding-top: 10px;
+	font-size: 16px;
+	font-family: 'open_sanssemibold';
+	color: #227464;
+	width: 152px;
+	height: 25px;
+	background: -webkit-linear-gradient(rgb(165,239,221) 0%, rgb(63,183,154) 100%);
+    background: -o-linear-gradient(rgb(165,239,221) 0%, rgb(63,183,154) 100%);
+    background: linear-gradient(rgb(165,239,221) 0%, rgb(63,183,154) 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5efdd', endColorstr='#3fb79a',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #2fa185;
+    border-radius: 5px;
+    margin-left: 93px;
+    text-decoration: none;
+}
+.button:hover{
+    color: #467366;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#90dabc+0,669f87+100 */
+    background: rgb(144,218,188); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(144,218,188,1) 0%, rgba(102,159,135,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(144,218,188,1) 0%,rgba(102,159,135,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(144,218,188,1) 0%,rgba(102,159,135,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#90dabc', endColorstr='#669f87',GradientType=0 ); /* IE6-9 */
+}
+.button:active{
+    color: #eeedec;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#78b99f+0,4a7664+100 */
+    background: rgb(120,185,159); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(120,185,159,1) 0%, rgba(74,118,100,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(120,185,159,1) 0%,rgba(74,118,100,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(120,185,159,1) 0%,rgba(74,118,100,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78b99f', endColorstr='#4a7664',GradientType=0 ); /* IE6-9 */
+}
