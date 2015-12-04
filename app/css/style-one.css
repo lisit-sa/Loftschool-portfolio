@@ -16,12 +16,12 @@
     background: #eeedec;
     border-radius: 5px;
     margin-bottom: 30px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 }
 .main-right-info{
     display: block;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9a7a7+0,7c7a7a+100 */
-    background: rgb(169,167,167);
+    background: rgb(169,167,167); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(169,167,167,1) 0%, rgba(124,122,122,1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  rgba(169,167,167,1) 0%,rgba(124,122,122,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(169,167,167,1) 0%,rgba(124,122,122,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -95,6 +95,8 @@
     width: 230px;
     display: inline-block;
     padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .info-skill{
 	background: linear-gradient(white 0%, #fbf9f9 6%, #e9e6e4 100%);
@@ -146,54 +148,75 @@
     font-family: 'open_sanssemibold';
 }
 .main-right-case{
-    font-size: 0;
-    text-align: top;
-    padding-left: 0;
+    width: 470px;
+    margin-top: 45px;
+    list-style: none;
 }
 .right-section-prof{
-    width: 560px;
-    border-bottom: 1px solid #dbdbda;
-    min-height: 78px;
-    margin-bottom: 13px;
-    margin-left: 45px;
-    font-size: 0;
-    vertical-align: middle;
+    margin-bottom: 40px;
+    font-size: 14px;
+    position: relative;
 }
-.right-section-prof:last-child{
-    border: none;
-    margin-bottom: 0;
+.right-section-prof-last{
+    margin-bottom: 25px;
+    font-size: 14px;
+    position: relative;
 }
-.right-section-prof:before {
+.right-section-prof-last:before{
     content: url("../img/brief-bag.png");
     position: absolute;
     text-align: center;
-    padding-top: 20px;
-    width: 54px;
-    height: 34px;
+    padding-top: 15px;
+    width: 50px;
+    height: 30px;
     background: #f7f7f7;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
     box-shadow: -1px -1px 1px 1px #cfcfcf;
     border: 1px solid #fcfcfc;
+    top: 50%;
+    margin-top: -30px;
+}
+.right-section-prof:before{
+    content: url("../img/brief-bag.png");
+    position: absolute;
+    text-align: center;
+    padding-top: 15px;
+    width: 50px;
+    height: 30px;
+    background: #f7f7f7;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: -1px -1px 1px 1px #cfcfcf;
+    border: 1px solid #fcfcfc;
+    top: 50%;
+    margin-top: -30px;
+}
+.right-section-prof:after{
+    content: '';
+    position: absolute;
+    width: 560px;
+    height: 1px;
+    bottom: -15px;
+    background-color: #dbdbda;
+    border-radius: 1px;
 }
 .main-right-prof{
-    display: inline-block;
     margin-left: 95px;
     width: 460px;
+    margin-bottom: 20px;
 }
 .prof{
-    margin-top: 10px;
-    font-size: 14px;
     vertical-align: top;
     color: #727070;
-    margin-bottom: 0;
+    margin: 0;
     font-family: 'open_sanssemibold';
 }
 .prof-time{
-    display: inline-block;
     margin-top: 0;
-    font-size: 14px;
+    display: inline-block;
     vertical-align: top;
     color: #727070;
     font-family: 'open_sanssemibold';
@@ -201,7 +224,7 @@
 .main-right-education{
     display: block;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a9a7a7+0,7c7a7a+100 */
-    background: rgb(169,167,167);
+    background: rgb(169,167,167); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(169,167,167,1) 0%, rgba(124,122,122,1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  rgba(169,167,167,1) 0%,rgba(124,122,122,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(169,167,167,1) 0%,rgba(124,122,122,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -219,6 +242,91 @@
     font-family: 'open_sanssemibold';
 }
 .right-section-education{
+    margin-bottom: 40px;
+    font-size: 14px;
+    position: relative;
+}
+.section-one:before {
+    content: url("../img/blocknote.png");
+    position: absolute;
+    text-align: center;
+    padding-top: 15px;
+    width: 50px;
+    height: 30px;
+    background: #f7f7f7;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: -1px -1px 1px 1px #cfcfcf;
+    border: 1px solid #fcfcfc;
+    top: 50%;
+    margin-top: -30px;
+}
+.section-two:before {
+    content: url("../img/hat.png");
+    position: absolute;
+    text-align: center;
+    padding-top: 15px;
+    width: 50px;
+    height: 30px;
+    background: #f7f7f7;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: -1px -1px 1px 1px #cfcfcf;
+    border: 1px solid #fcfcfc;
+    top: 50%;
+    margin-top: -30px;
+}
+.section-three:before {
+    content: url("../img/sheet.png");
+    position: absolute;
+    text-align: center;
+    padding-top: 15px;
+    width: 50px;
+    height: 30px;
+    background: #f7f7f7;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    box-shadow: -1px -1px 1px 1px #cfcfcf;
+    border: 1px solid #fcfcfc;
+    top: 50%;
+    margin-top: -30px;
+}
+.right-section-education:after{
+    content: '';
+    position: absolute;
+    width: 560px;
+    height: 1px;
+    bottom: -15px;
+    background-color: #dbdbda;
+    border-radius: 1px;
+}
+.right-section-education-last{
+    margin-bottom: 25px;
+    font-size: 14px;
+    position: relative;
+}
+.main-right-lore{
+    margin-left: 95px;
+    width: 460px;
+    margin-bottom: 20px;
+}
+.education{
+    vertical-align: top;
+    color: #727070;
+    margin: 0;
+    font-family: 'open_sanssemibold';
+}
+.education-time{
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: top;
+    color: #727070;
+    font-family: 'open_sanssemibold';
+}
+/*.right-section-education{
     width: 560px;
     border-bottom: 1px solid #dbdbda;
     min-height: 78px;
@@ -227,7 +335,7 @@
     font-size: 0;
     vertical-align: middle;
 }
-.right-section-education:last-child{
+.section-three{
     border: none;
     margin-bottom: 0;
 }
