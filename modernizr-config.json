@@ -1,0 +1,30 @@
+{
+  "minify": true,
+  "options": [
+    "html5printshiv",
+    "html5shiv",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/applicationcache",
+    "test/css/backgroundblendmode",
+    "test/css/backgroundcliptext",
+    "test/css/backgroundposition-shorthand",
+    "test/css/backgroundposition-xy",
+    "test/css/backgroundrepeat",
+    "test/css/backgroundsize",
+    "test/css/backgroundsizecover",
+    "test/css/borderradius",
+    "test/css/boxshadow",
+    "test/css/displaytable",
+    "test/css/fontface",
+    "test/css/lastchild",
+    "test/css/opacity",
+    "test/forms/capture",
+    "test/forms/fileinput",
+    "test/forms/fileinputdirectory",
+    "test/forms/formattribute",
+    "test/forms/placeholder",
+    "test/forms/validation"
+  ]
+}
