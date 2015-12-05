@@ -42,8 +42,8 @@
  	visibility: hidden;
 }
 .form input[type=text] {
-	width: 190px;
-  	padding:10px 10px 10px 55px;
+	width: 170px;
+  	padding:10px 10px 10px 75px;
   	margin-top: 20px;
 	margin-left: 35px;
  	border-radius: 5px;
@@ -51,8 +51,8 @@
  	min-height: 20px;
 }
 .form input[type=password]{
-	width: 190px;
-  	padding:10px 10px 10px 55px;
+	width: 170px;
+  	padding:10px 10px 10px 75px;
   	margin-top: 10px;
 	margin-left: 35px;
  	border-radius: 5px;
@@ -70,50 +70,47 @@
 .icon-password:before { 
 	content: url("../img/key-arrow.png"); 
 }
+.required-mail placeholder {
+	font-size: 12px;
+	font-family: 'open_sanslight';
+	color: #c7c6c6;
+}
 .required-mail::-webkit-input-placeholder {
-	padding-left: 20px;
 	font-size: 12px;
 	font-family: 'open_sanslight';
 	color: #c7c6c6;
 }
 .required-mail::-moz-placeholder{
-	padding-left: 20px;
 	font-size: 12px;
 	font-family: 'open_sanslight';
 	color: #c7c6c6;
 	}/* Firefox 19+ */
 .required-mail:-moz-placeholder{
-	padding-left: 20px;
 	font-size: 12px;
 	font-family: 'open_sanslight';
 	color: #c7c6c6;
 	}/* Firefox 18- */
 .required-mail:-ms-input-placeholder{
-	padding-left: 20px;
 	font-size: 12px;
 	font-family: 'open_sanslight';
 	color: #c7c6c6;
 }
 .required-pass::-webkit-input-placeholder {
-	padding-left: 20px;
 	font-size: 12px;
 	font-family: 'open_sanslight';
 	color: #c7c6c6;
 }
 .required-pass::-moz-placeholder{
-	padding-left: 20px;
 	font-size: 12px;
 	font-family: 'open_sanslight';
 	color: #c7c6c6;
 	}/* Firefox 19+ */
 .required-pass:-moz-placeholder {
-	padding-left: 20px;
 	font-size: 12px;
 	font-family: 'open_sanslight';
 	color: #c7c6c6;
 	}/* Firefox 18- */
 .required-pass:-ms-input-placeholder{
-	padding-left: 20px;
 	font-size: 12px;
 	font-family: 'open_sanslight';
 	color: #c7c6c6;
@@ -162,7 +159,6 @@ input[type="checkbox"]:checked + label::before{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5efdd', endColorstr='#3fb79a',GradientType=0 ); /* IE6-9 */
     border: 1px solid #2fa185;
     border-radius: 5px;
-    margin-top: 30px;
     margin-left: 93px;
     text-decoration: none;
     position: absolute;
