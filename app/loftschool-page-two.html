@@ -119,9 +119,7 @@
 									<a class="main-right-site-link" href="#">yasnow.biz</a>
 									<p class="main-right-site-info">Landing page по продажае франшизы снежного бизнеса.</p>
 								</li>
-								<li class="main-right-site add">
-									<a href="#" class="add-project">Добавить проект</a>
-								</li>
+									<a href="#" class="main-right-site add" onclick="bopen();"><span class="add-project">Добавить проект</span></a>
 							</ul>
 						</div>
 					</div>
@@ -139,7 +137,7 @@
 		<div class="pop-up clearfix">
 		<div class="pop-up-header">Добавление проекта</div>
 			<form enctype="multipart/form-data" method="post">
-				<a href="#" class="pop-up-close"></a>
+				<a href="#" class="pop-up-close" onclick="bclose()";></a>
 				<p class="write-float write-float-one">
 					<label for="name-p">Название проекта</label>
 					<input type="text" name="name-project" placeholder="Введите название" id="name-p">
@@ -163,4 +161,7 @@
 			</form>
 		</div>
 	</body>
+	<script type="text/javascript" src="bower/jquery/jquery.js"></script>
+	<script type="text/javascript" src="bower/bPopup/jquery.bpopup.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </html>
