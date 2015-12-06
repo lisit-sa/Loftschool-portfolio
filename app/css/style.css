@@ -11,9 +11,10 @@ body{
     /*background: linear-gradient(45deg,  rgb(80,97,117) 16%,rgb(242,232,173) 65%,rgb(136,238,175) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#506175', endColorstr='#88eeaf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     background-attachment: fixed;
-    background: url("../img/back.png");
+    background-image: url("../img/back.png");
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
+    background-position: center center;
 }
 html{
     height: 100%;
@@ -47,8 +48,11 @@ html{
 .clearfix:after{
     clear: both;
 }
+.header-logotype{
+    width: 120px;
+}
 .header-logo{
-    min-width: 120px;
+    width: 120px;
     float: left;
     padding-top: 10px;
 }

@@ -244,7 +244,7 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
-    margin-top: 32px;
+    margin-top: 29px;
     margin-right: 23px;
     margin-bottom: 0;
 }
@@ -269,7 +269,7 @@
     display: table-cell;
     margin-left: 15px;
 }
-.pop-up input[name="url-project"]{
+input[name="url-project"]{
     min-width: 310px;
     margin-top: 8px;
     height: 44px;
@@ -282,6 +282,7 @@
 }
 .write-textarea{
     margin-bottom: 0;
+    float: left;
 }
 .pop-up textarea{
     width: 310px;

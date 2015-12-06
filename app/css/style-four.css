@@ -7,7 +7,7 @@
 }
  .enter-authorization{
  	font-family: 'open_sanslight';
- 	font-size: 14px;
+ 	font-size: 12px;
  	color: #727070;
  	margin-bottom: 5px;
  	margin-left: 20px;
@@ -49,8 +49,10 @@
  	border-radius: 5px;
  	border: 1px solid #d6d5d3;
  	min-height: 20px;
+ 	font-family: 'open_sanslight';
+ 	font-size: 12px;
 }
-.form input[type=password]{
+.form input[name="password"]{
 	width: 170px;
   	padding:10px 10px 10px 75px;
   	margin-top: 10px;
@@ -58,6 +60,8 @@
  	border-radius: 5px;
  	border: 1px solid #d6d5d3;
  	min-height: 20px;
+ 	font-family: 'open_sanslight';
+ 	font-size: 12px;
 }
 .icon-password {
   	position:absolute; 

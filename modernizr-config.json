@@ -16,15 +16,22 @@
     "test/css/backgroundsizecover",
     "test/css/borderradius",
     "test/css/boxshadow",
+    "test/css/displayrunin",
     "test/css/displaytable",
+    "test/css/ellipsis",
     "test/css/fontface",
     "test/css/lastchild",
     "test/css/opacity",
+    "test/css/overflow-scrolling",
     "test/forms/capture",
     "test/forms/fileinput",
     "test/forms/fileinputdirectory",
     "test/forms/formattribute",
     "test/forms/placeholder",
-    "test/forms/validation"
+    "test/forms/validation",
+    "test/input/formaction",
+    "test/input/formenctype",
+    "test/input/formmethod",
+    "test/input/formtarget"
   ]
 }
