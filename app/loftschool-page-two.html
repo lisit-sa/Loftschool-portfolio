@@ -10,6 +10,7 @@
 		<meta name="viewport" content="width=1201, initial-scale=1">
 		<script type="text/javascript" src="js/modernizr.js"></script>
 		<title>Document</title>
+		<link type="text/css" rel="stylesheet" href="bower/qtip2/jquery.qtip.min.css" />
 		<!--[if lt IE 9]>
 			<script src="js/placeholder.js"></script>
 		<![endIf]-->
@@ -122,7 +123,7 @@
 									<a class="main-right-site-link" href="#">yasnow.biz</a>
 									<p class="main-right-site-info">Landing page по продажае франшизы снежного бизнеса.</p>
 								</li>
-									<a href="#" class="main-right-site add" onclick="bopen();"><span class="add-project">Добавить проект</span></a>
+								<a href="#" class="main-right-site add" onclick="bopen();"><span class="add-project">Добавить проект</span></a>
 							</ul>
 						</div>
 					</div>
@@ -138,33 +139,61 @@
 			</div>
 		</footer>
 		<div class="pop-up clearfix">
-		<div class="pop-up-header">Добавление проекта</div>
-			<form enctype="multipart/form-data" method="post">
-				<a href="#" class="pop-up-close" onclick="bclose()";></a>
-				<p class="write-float write-float-one">
-					<label for="name-p">Название проекта</label>
-					<input type="text" name="name-project" placeholder="Введите название" id="name-p">
-				</p>
-				<p class="write-float write-float-two">
-					<label for="img-p">Картинка проекта</label>
-					<input type="text" class="img-project" name="img-project" placeholder="Загрузите изображение" id="img-p">
-				</p>
-				<p class="download-project">
-					<input type="file" name="download-p" class="download-p" multiple accept="image/*">
-				</p>
-				<p class="write-float write-float-three">
-					<label for="url-p">URL проекта</label>
-					<input type="text" name="url-project" placeholder="Добавьте ссылку" id="url-p">
-				</p>
-				<p class="write-textarea">
-					<label for="about-project">Описание</label>
-					<textarea placeholder="Пара слов о Вашем проекте" rows="6" id="about-project"></textarea>
-				</p>
-				<input type="submit" value="Добавить" name="button-add">
-			</form>
+			<div class="md-content">
+				<div class="file-md-title">Добавление проекта
+			</div>
+			<div class="file-md-cont">
+				<form action="add_work.php" id="file-md-form">
+					<a href="" class="pop-up-close"></a>
+					<div class="block-info  bl-error wrp-bl-info" hidden>
+						<div class="block-info-close bl-error">x</div>
+						<div class="block-info-title bl-error">Ошибка</div>
+						<div class="block-info-content bl-error">Невозможно добавить проект.</div>
+					</div><!-- / block-info -->
+					<div class="wrap-info-bl bl-success wrp-bl-info" hidden>
+						<div class="block-info bl-success">
+							<div class="block-info-close bl-success">x</div>
+							<div class="block-info-title bl-success">Ура!</div>
+							<div class="block-info-content bl-success">Проект успешно добавлен.</div>
+						</div><!-- / block-info -->
+					</div><!-- / wrap-info-bl -->
+					<div class="form-item">
+						<label for="prj_name" class="lable-item lable-first">Название проекта</label>
+						<input type="text" name="prj_name" id="prj_name" class="input-item add-tooltip" placeholder='Введите название' data-errtxt='введите название' data-pos="left" data-valtype="text">
+					</div><!-- /form-item-->
+					
+					<div class="form-item">
+						<label for="prj_img" class="lable-item">Картинка проекта</label>
+						<div class="bl-upl-img">
+							<input type="text" name="prj_img_text" id="prj_img_text" class="input-item add-tooltip" placeholder='Загрузите изображение' data-errtxt='изображение' data-pos="left"  data-valtype="text">
+							<div class="bl-upl-icon">
+								<input type="file" name="prj_img" id="prj_img" class="input-foto">
+							</div>
+						</div><!-- /bl-upl-img-->
+					</div><!-- /form-item-->
+					
+					<div class="form-item">
+						<label for="prj_url" class="lable-item">URL проекта</label>
+						<input type="text" name="prj_url" id="prj_url" class="input-item add-tooltip" placeholder='Добавьте ссылку' data-errtxt='Ссылка на проект' data-pos="left"  data-valtype="url">
+					</div><!-- /form-item-->
+					
+					<div class="form-item">
+						<label for="prj_text" class="lable-item">Описание</label>
+						<textarea  name="prj_text" id="prj_text" rows="8" class="textarea-item add-tooltip" placeholder='Пара слов о Вашем проекте'  data-errtxt='Описание проекта' data-pos="left"  data-valtype="text"></textarea>
+					</div><!-- /form-item-->
+					<div class="form-item">
+						<input type="submit" class="btn btn-send" value="Добавить">
+					</div><!-- /form-item-->
+				</form>
+			</div>
 		</div>
+			<script type="text/javascript" src="bower/jquery/jquery.js"></script>
+			<script type="text/javascript" src="bower/bpopup/jquery.bpopup.js"></script>
+			<script type="text/javascript" src="js/main.js"></script>
+	    	<script src="bower/qtip2/jquery.qtip.min.js"></script>
+    		<script src="bower/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    		<script src="js/plugins.js"></script>
+    		<script src="js/general.js"></script>
+    		<script type="text/javascript" src="js/main.js"></script>
 	</body>
-	<script type="text/javascript" src="bower/jquery/jquery.js"></script>
-	<script type="text/javascript" src="bower/bPopup/jquery.bpopup.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
 </html>

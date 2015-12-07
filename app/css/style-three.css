@@ -108,41 +108,13 @@
     font-size: 14px;
     color: #727070;
 }
-.capcha-block{
-    width: 400px;
+.g-recaptcha{
     margin-left: 125px;
     color: #727070;
     font-size: 14px;
     display: block;
     float: left;
     margin-top: 0;
-}
-.capcha-header{
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.capcha-img{
-    width: 190px;
-    height: 80px;
-    border: 1px solid #d7dcde;
-    border-radius:5px;
-    background: #fbfcfd;
-    background: url("../img/capcha.png") no-repeat center center;
-    background-color: #fbfcfd;
-    display: inline-block;
-    margin-top: 5px;
-}
-.write-block input[name="captcha-input"]{
-    min-width: 175px;
-    height: 28px;
-    border: 1px solid #d6d5d3;
-    font-size: 12px;
-    border-radius:5px;
-    color: #727070;
-    padding-left: 10px;
-    font-family: 'open_sanslight';
-    float: right;
-    margin-top: 30px;
 }
 .write-block input[name="send"]{
     float: left;
@@ -230,4 +202,13 @@
     background: -webkit-linear-gradient(top,  rgba(168,167,167,1) 0%,rgba(124,122,122,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(168,167,167,1) 0%,rgba(124,122,122,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a7a7', endColorstr='#7c7a7a',GradientType=0 ); /* IE6-9 */
+}
+.tooltip{
+    color:#fff !important;
+    padding: 2px 5px !important;
+    border: 1px solid #f97e76 !important;
+    background: #f97e76 !important;
+    font-size: 13px !important;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }

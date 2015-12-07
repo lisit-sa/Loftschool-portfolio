@@ -13,6 +13,7 @@
 		<!--[if lt IE 9]>
 			<script src="js/placeholder.js"></script>
 		<![endIf]-->
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -85,11 +86,7 @@
 										<label for="letter">Сообщение</label>
 										<textarea placeholder="Кратко в чем суть" rows="9" id="letter"></textarea>
 									</p>
-									<p class="capcha-block">
-										<span class="capcha-header">Введите код, указанный на картинке</span>
-										<span class="capcha-img"></span>
-										<input type="text" name="captcha-input" class="capcha-input" placeholder="Введите код">
-									</p>
+									<div class="g-recaptcha" data-sitekey="6LeWhxITAAAAALCQ1__CJFF-GcGZKOg1_WVZvWSb"></div>
 									<p class="write-buttons">
 										<input type="submit" value="Отправить" name="send">
 										<input type="reset" value="Очистить" name="cancel">
@@ -109,5 +106,6 @@
 				<p class="footer-my-site">&#169;2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.</p>
 			</div>
 		</footer>
+		<script type="text/javascript" src="bower/jquery/jquery.js"></script>
 	</body>
 </html>
