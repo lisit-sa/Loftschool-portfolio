@@ -2,6 +2,7 @@
 <html lang="ru-RU">
 	<head>
 		<meta charset="UTF-8">
+		<title>Document</title>
 		<link rel="stylesheet" type="text/css" href="bower/normalize-css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/style-two.css">
@@ -9,7 +10,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=1201, initial-scale=1">
 		<script type="text/javascript" src="js/modernizr.js"></script>
-		<title>Document</title>
 		<link type="text/css" rel="stylesheet" href="bower/qtip2/jquery.qtip.min.css" />
 		<!--[if lt IE 9]>
 			<script src="js/placeholder.js"></script>
@@ -20,20 +20,20 @@
 			<header class="main-header">
 				<div class="header-menu clearfix">
 					<div class="header-logotype">
-						<a class="header-logo" href="index.html"><img src="img/logo-top.png" width="95" height="71" alt="logo"></a>
+						<a class="header-logo" href="index.html"><img src="img/logo-top.png" alt="logo"></a>
 					</div>
 					<ul class="header-social-btn">
 						<li>
-							<a href="https://www.facebook.com/profile.php?id=100010655435660" class="sprite social-btn icon-facebook"></a>
+							<a href="https://www.facebook.com/profile.php?id=100010655435660" class="sprite social-btn icon-facebook" target="_blank"></a>
 						</li>
 						<li>
-							<a href="https://vk.com/ryzhij_lisenok" class="sprite social-btn icon-vk"></a>
+							<a href="https://vk.com/ryzhij_lisenok" class="sprite social-btn icon-vk" target="_blank"></a>
 						</li>
 						<li>
-							<a href="https://twitter.com" class="sprite social-btn icon-twitter"></a>
+							<a href="https://twitter.com" class="sprite social-btn icon-twitter" target="_blank"></a>
 						</li>
 						<li>
-							<a href="https://github.com/lisit-sa" class="sprite social-btn icon-github"></a>
+							<a href="https://github.com/lisit-sa" class="sprite social-btn icon-github" target="_blank"></a>
 						</li>
 					</ul>
 				</div>
@@ -139,61 +139,37 @@
 			</div>
 		</footer>
 		<div class="pop-up clearfix">
-			<div class="md-content">
-				<div class="file-md-title">Добавление проекта
-			</div>
-			<div class="file-md-cont">
-				<form action="add_work.php" id="file-md-form">
-					<a href="" class="pop-up-close"></a>
-					<div class="block-info  bl-error wrp-bl-info" hidden>
-						<div class="block-info-close bl-error">x</div>
-						<div class="block-info-title bl-error">Ошибка</div>
-						<div class="block-info-content bl-error">Невозможно добавить проект.</div>
-					</div><!-- / block-info -->
-					<div class="wrap-info-bl bl-success wrp-bl-info" hidden>
-						<div class="block-info bl-success">
-							<div class="block-info-close bl-success">x</div>
-							<div class="block-info-title bl-success">Ура!</div>
-							<div class="block-info-content bl-success">Проект успешно добавлен.</div>
-						</div><!-- / block-info -->
-					</div><!-- / wrap-info-bl -->
-					<div class="form-item">
-						<label for="prj_name" class="lable-item lable-first">Название проекта</label>
-						<input type="text" name="prj_name" id="prj_name" class="input-item add-tooltip" placeholder='Введите название' data-errtxt='введите название' data-pos="left" data-valtype="text">
-					</div><!-- /form-item-->
-					
-					<div class="form-item">
-						<label for="prj_img" class="lable-item">Картинка проекта</label>
-						<div class="bl-upl-img">
-							<input type="text" name="prj_img_text" id="prj_img_text" class="input-item add-tooltip" placeholder='Загрузите изображение' data-errtxt='изображение' data-pos="left"  data-valtype="text">
-							<div class="bl-upl-icon">
-								<input type="file" name="prj_img" id="prj_img" class="input-foto">
-							</div>
-						</div><!-- /bl-upl-img-->
-					</div><!-- /form-item-->
-					
-					<div class="form-item">
-						<label for="prj_url" class="lable-item">URL проекта</label>
-						<input type="text" name="prj_url" id="prj_url" class="input-item add-tooltip" placeholder='Добавьте ссылку' data-errtxt='Ссылка на проект' data-pos="left"  data-valtype="url">
-					</div><!-- /form-item-->
-					
-					<div class="form-item">
-						<label for="prj_text" class="lable-item">Описание</label>
-						<textarea  name="prj_text" id="prj_text" rows="8" class="textarea-item add-tooltip" placeholder='Пара слов о Вашем проекте'  data-errtxt='Описание проекта' data-pos="left"  data-valtype="text"></textarea>
-					</div><!-- /form-item-->
-					<div class="form-item">
-						<input type="submit" class="btn btn-send" value="Добавить">
-					</div><!-- /form-item-->
+				<div class="pop-up-header">Добавление проекта</div>
+				<form action="" id="forms">
+					<a href="#" class="pop-up-close"></a>
+                	<div class="write-float write-float-one">
+                    	<label for="name-p">Название проекта</label>
+                   		<input type="text" name="name-project" placeholder="Введите название" id="name-p" qtip-position="left" qtip-content="Введите название">
+               		</div>
+					<div class="title-fileupload">
+					<p class="popup-text-font">Картинка проекта</p>
+					</div>
+					<label class="file_upload">
+        				<span class="button"></span>
+        				<mark class="mark-text" qtip-position="left" qtip-content="Вы не выбрали изображение">Загрузите изображение</mark>
+       					<input type="file">
+   					</label>
+                	<div class="write-float write-float-three">
+                    	<label for="url-p">URL проекта</label>
+                    	<input type="text" name="url-project" placeholder="Добавьте ссылку" id="url-p" qtip-position="left" qtip-content="Укажите ссылку на проект"> 
+                	</div>
+                	<div class="write-textarea">
+                   		<label for="about-project">Описание</label>
+                    	<textarea placeholder="Пара слов о Вашем проекте" rows="6" id="about-project" qtip-position="left" qtip-content="Введите описание проекта"></textarea>
+                	</div>
+						<input type="submit" value="Добавить" name="button-add">
 				</form>
-			</div>
 		</div>
-			<script type="text/javascript" src="bower/jquery/jquery.js"></script>
-			<script type="text/javascript" src="bower/bpopup/jquery.bpopup.js"></script>
-			<script type="text/javascript" src="js/main.js"></script>
-	    	<script src="bower/qtip2/jquery.qtip.min.js"></script>
-    		<script src="bower/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    		<script src="js/plugins.js"></script>
-    		<script src="js/general.js"></script>
-    		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="bower/jquery/jquery.js"></script>
+		<script type="text/javascript" src="bower/qtip2/jquery.qtip.min.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
+		<script type="text/javascript" src="js/validation.js"></script>
+		<script type="text/javascript" src="js/form.js"></script>
+	    <script type="text/javascript" src="bower/bpopup/jquery.bpopup.js"></script>
 	</body>
 </html>

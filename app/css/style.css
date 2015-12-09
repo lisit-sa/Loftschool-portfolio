@@ -50,14 +50,17 @@ html{
 }
 .header-logotype{
     width: 120px;
+    float: left;
 }
 .header-logo{
-    width: 120px;
-    float: left;
+    width: 95px;
+    height: 75px;
+    display: block;
     padding-top: 10px;
+    overflow: hidden;
 }
 .sprite{
-    background-image: url("../img/spritesheet.png");
+    background: url("../img/spritesheet.png");
     background-repeat: no-repeat;
     display: inline-block;
 }

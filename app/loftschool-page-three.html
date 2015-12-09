@@ -10,6 +10,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=1201, initial-scale=1">
 		<script type="text/javascript" src="js/modernizr.js"></script>
+		<script type="text/javascript" src="bower/validation/validation.js"></script>
 		<!--[if lt IE 9]>
 			<script src="js/placeholder.js"></script>
 		<![endIf]-->
@@ -20,20 +21,20 @@
 			<header class="main-header">
 				<div class="header-menu clearfix">
 					<div class="header-logotype">
-						<a class="header-logo" href="index.html"><img src="img/logo-top.png" width="95" height="71" alt="logo"></a>
+						<a class="header-logo" href="index.html"><img src="img/logo-top.png" alt="logo"></a>
 					</div>
 					<ul class="header-social-btn">
 						<li>
-							<a href="https://www.facebook.com/profile.php?id=100010655435660" class="sprite social-btn icon-facebook"></a>
+							<a href="https://www.facebook.com/profile.php?id=100010655435660" class="sprite social-btn icon-facebook" target="_blank"></a>
 						</li>
 						<li>
-							<a href="https://vk.com/ryzhij_lisenok" class="sprite social-btn icon-vk"></a>
+							<a href="https://vk.com/ryzhij_lisenok" class="sprite social-btn icon-vk" target="_blank"></a>
 						</li>
 						<li>
-							<a href="https://twitter.com" class="sprite social-btn icon-twitter"></a>
+							<a href="https://twitter.com" class="sprite social-btn icon-twitter" target="_blank"></a>
 						</li>
 						<li>
-							<a href="https://github.com/lisit-sa" class="sprite social-btn icon-github"></a>
+							<a href="https://github.com/lisit-sa" class="sprite social-btn icon-github" target="_blank"></a>
 						</li>
 					</ul>
 				</div>
@@ -73,24 +74,24 @@
 						<div class="write-header">У Вас интересный проект? Напишите мне</div>
 						<div class="write-block">
 							<div class="write-block-center clearfix">
-								<form method="post">
-									<p class="float float-one">
+								<form method="post" id="file-md-form">
+									<div class="float float-one">
 										<label for="login">Имя</label>
-										<input type="text" name="login" placeholder="Как к Вам обращаться" id="login">
-									</p>
-									<p class="float float-two">
+										<input type="text" name="login" class="add-tooltip" placeholder="Как к Вам обращаться" id="login" data-errtxt='введите имя' data-pos="left" data-valtype="text">
+									</div>
+									<div class="float float-two">
 										<label for="e-mail">Email</label>
-										<input type="text" name="e-mail" placeholder="Куда мне писать" id="e-mail">
-									</p>
-									<p class="textarea">
+										<input type="text" name="e-mail" class="add-tooltip" placeholder="Куда мне писать" id="e-mail" data-errtxt='введите e-mail' data-pos="left" data-valtype="email">
+									</div>
+									<div class="textarea">
 										<label for="letter">Сообщение</label>
-										<textarea placeholder="Кратко в чем суть" rows="9" id="letter"></textarea>
-									</p>
+										<textarea placeholder="Кратко в чем суть" class="add-tooltip" rows="9" id="letter" data-errtxt='ваш вопрос' data-pos="left"  data-valtype="text"></textarea>
+									</div>
 									<div class="g-recaptcha" data-sitekey="6LeWhxITAAAAALCQ1__CJFF-GcGZKOg1_WVZvWSb"></div>
-									<p class="write-buttons">
+									<div class="write-buttons">
 										<input type="submit" value="Отправить" name="send">
 										<input type="reset" value="Очистить" name="cancel">
-									</p>
+									</div>
 								</form>
 							</div>
 						</div>
@@ -106,6 +107,5 @@
 				<p class="footer-my-site">&#169;2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.</p>
 			</div>
 		</footer>
-		<script type="text/javascript" src="bower/jquery/jquery.js"></script>
 	</body>
 </html>
