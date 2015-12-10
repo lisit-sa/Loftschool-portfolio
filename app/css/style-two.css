@@ -179,7 +179,8 @@
 }
 .pop-up-header{
     font-family: 'open_sanslight';
-    font-size: 14px;
+    font-size: 12px;
+    color: #fff;
     margin-bottom: 5px;
     margin-left: 20px;
 }
@@ -211,10 +212,9 @@
     float: left;
     margin-left: 20px;
     margin-bottom: 0;
-    margin-top: 0;
+    margin-top: 5px;
 }
 .pop-up .write-float label{
-    margin-top: 5px;
     display: block;
     color: #727070;
     font-size: 14px
@@ -222,78 +222,119 @@
 .pop-up input[name="name-project"]{
     min-width: 310px;
     margin-top: 8px;
-    height: 38px;
+    margin-bottom: 5px;
+    padding: 10px 5px 12px 10px;
     border: 1px solid #d6d5d3;
     font-size: 12px;
     border-radius:5px;
     color: #727070;
-    padding-left: 10px;
     font-family: 'open_sanslight';
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f8f9+0,f4f3f3+100 */
+    background: rgb(247,248,249); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(247,248,249,1) 0%, rgba(244,243,243,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', endColorstr='#f4f3f3',GradientType=0 ); /* IE6-9 */
+
 }
-.file_upload{
-    width:314px;
+.file-upload{
+    width:323px;
     margin-left:21px;
     display: block;
     position: relative;
     overflow: hidden;
-    font-size: 1em;             
-    height: 40px;                 
-    line-height: 2.5em             
+    font-size: 12px;             
+    height: 40px;  
+    border: 1px solid #d6d5d3;
+    border-radius: 5px;   
+    float: left;             
 }
-.file_upload .button, .file_upload > .mark-text{
+.popup-text-font{
+    display: block;
+    color: #727070;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    float: left;
+}
+.file-upload .button, .file-upload > .mark-text{
     display: block;
     cursor: pointer            
 }
-.button{
-    text-indent:-9999px;
-}
-.file_upload .button{
+.file-upload .button{
     float: right;
-    width: 49px;                 
-    height: 100%;          
+    width: 53px;                 
+    height: 43px;
+    border-left:1px solid #d6d5d3;        
+    background-position: 10px 10px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcfcfc+0,e6e4e3+100 */
+    background: rgb(252,252,252); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(230,228,227,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(230,228,227,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(230,228,227,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#e6e4e3',GradientType=0 ); /* IE6-9 */
 }
-.file_upload mark{
-    background: #FFF;    
-    padding-left: 1em;          
+.file-upload .button:after{
+    content: url("../img/cloud.png");
+    width: 25px;
+    height: 19px;
+    position: absolute;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: 10px;
 }
-
-.file_upload input[type=file]{
+.file-upload mark{
+    background: inherit;    
+    color: #727070;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-family: 'open_sanslight'; 
+}
+input[type=file]{
     position: absolute;
     top: 0;
     opacity: 0;
-    width:1px;
-    height:1px;
-}
-.file_upload{
-    border: 1px solid red;
-    border-radius: 3px;
-}
-.file_upload .button{
-    background:url(../img/cloud.png) no-repeat;
+    -moz-opacity: 0;
+    filter: alpha(opacity=0);
+    width:280px;
+    height:44px;
+    color: #727070;
+    width: 265px;
+    background: inherit;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f8f9+0,f4f3f3+100 */
+    background: rgb(247,248,249); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(247,248,249,1) 0%, rgba(244,243,243,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .mark-text{
-    font-size:13px;
+    font-size:12px;
     margin-left:-4px;
-}
-#pop-it-up{
-    display:none;
 }
 input[name="url-project"]{
     min-width: 310px;
     margin-top: 8px;
-    height: 44px;
+    padding: 10px 5px 12px 10px;
     border: 1px solid #d6d5d3;
     font-size: 12px;
     border-radius:5px;
     color: #727070;
-    padding-left: 10px;
     font-family: 'open_sanslight';
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f8f9+0,f4f3f3+100 */
+    background: rgb(247,248,249); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(247,248,249,1) 0%, rgba(244,243,243,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', endColorstr='#f4f3f3',GradientType=0 ); /* IE6-9 */
+
 }
 .write-textarea{
-    margin-bottom: 0;
+    margin-bottom: 5px;
     float: left;
 }
 .pop-up textarea{
+    color: #727070;
     width: 310px;
     border: 1px solid #d7dcde;
     font-size: 12px;
@@ -303,6 +344,13 @@ input[name="url-project"]{
     resize: none;
     padding-top: 10px;
     margin-left: 20px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f8f9+0,f4f3f3+100 */
+    background: rgb(247,248,249); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(247,248,249,1) 0%, rgba(244,243,243,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', endColorstr='#f4f3f3',GradientType=0 ); /* IE6-9 */
+
 }
 .pop-up .write-textarea label{
     margin-top: 5px;
@@ -353,6 +401,5 @@ input[name="url-project"]{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78b99f', endColorstr='#4a7664',GradientType=0 ); 
 }
 .error{
-  background: #fad6d4;
-  border:1px solid #f97e76;
+  border:1px solid #e0ad99;
 }

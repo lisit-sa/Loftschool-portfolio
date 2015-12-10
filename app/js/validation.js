@@ -1,4 +1,4 @@
- /*----------TOOLTIPS-----------*/
+ /*-----Тултипы-----*/
 var validation = (function(){
 
 	var init = function(){
@@ -16,7 +16,7 @@ var validation = (function(){
 
 			var clearForm = function(form){
 				var form = $(this);
-				form.find('.input, .textarea, .captcha-input').trigger('hideTooltip');
+				form.find('.login, .textarea, .email, .captcha-input').trigger('hideTooltip');
 				form.find('.error').removeClass('error');
 			};
 
@@ -61,7 +61,7 @@ var validation = (function(){
 			var validateForm = function(form){
 
 
-				var elements = form.find('input, textarea, mark').not('input[type="file"], input[type="hidden"]'),
+				var elements = form.find('input, textarea').not('input[type="hidden"]'),
 				valid = true;
 
 				$.each(elements, function(index, val){

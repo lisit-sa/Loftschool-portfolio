@@ -1,6 +1,6 @@
-/*Реализуем стилизацию и добавление картинки*/
+/*Стили и добавление картинки*/
 $(function(){
-    var wrapper = $( ".file_upload" ),
+    var wrapper = $( ".file-upload" ),
         inp = wrapper.find( "input" ),
         btn = wrapper.find( ".button" ),
         lbl = wrapper.find( "mark" );
@@ -19,16 +19,17 @@ $(function(){
 
         if( lbl.is( ":visible" ) ){
             lbl.text( file_name );
-            btn.text( "Выбрать" );
         }else
-            btn.text( file_name );
+            inp.text( file_name );
     }).change();
 
 });
 $( window ).resize(function(){
-    $( ".file_upload input" ).triggerHandler( "change" );
+    $( ".file-upload input" ).triggerHandler( "change" );
 });
-/*Всплывающее POPUP окно Добавления проекта*/
+
+/*POPUP*/
+
     var popup = (function(){
         var popup;
         $('.add').on('click', function(e){
@@ -37,10 +38,12 @@ $( window ).resize(function(){
             speed: 650,
             transition: 'slideDown',
             transitionClose: 'slideDown',
-            modalColor:'#58697a'
+            modalColor:'#929181'
         });
         });
-         /*Закрытие окна Добавления проекта*/
+
+/*Закрыть POPUP*/
+
         $('.pop-up-close').on('click', function(e){
             popup.close();
         });
@@ -51,18 +54,16 @@ $( window ).resize(function(){
 
         var _setUpListners = function(){
         $('.pop-up-close').on('click', _removeError);
-        $('.pop-up-close').on('click', clearForm);
         };
 
         var _removeError = function(){
         $('input, textarea, mark').removeClass('error');
         };
 
-
-
         return{
         init: init
         };
 
     })();
-    popup.init();
+   
+popup.init();

@@ -1,11 +1,10 @@
- /*----------IE8 Placeholder-----------*/
+
  $(document).ready(function(){
-    //      if(!Modernizr.input.placeholder){
-            $('input, textarea').placeholder;
-        //  }
+
+            $('input[placeholder], textarea[placeholder]').placeholder();
         
  });
-/*------------------Валидация формы-----------------*/
+/*----------Валидация формы----------*/
  var contactMe = (function(){
 
  	var init = function(){

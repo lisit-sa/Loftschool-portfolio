@@ -2,6 +2,7 @@
   "name": "site",
   "devDependencies": {
     "browser-sync": "^2.10.0",
-    "gulp": "^3.9.0"
+    "gulp": "^3.9.0",
+    "jquery-placeholder": "^2.1.1"
   }
 }
