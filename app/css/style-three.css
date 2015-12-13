@@ -205,5 +205,5 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a7a7', endColorstr='#7c7a7a',GradientType=0 ); /* IE6-9 */
 }
 .error{
-  border:1px solid #e0ad99;
+    border: 1px solid #e0ac98 !important;
 }

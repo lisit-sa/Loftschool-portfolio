@@ -235,7 +235,6 @@
     background: -webkit-linear-gradient(top,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', endColorstr='#f4f3f3',GradientType=0 ); /* IE6-9 */
-
 }
 .file-upload{
     width:323px;
@@ -310,7 +309,11 @@ input[type=file]{
 }
 .mark-text{
     font-size:12px;
-    margin-left:-4px;
+    display: inline-block;
+    padding-bottom: 12px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
 }
 input[name="url-project"]{
     min-width: 310px;
@@ -401,5 +404,50 @@ input[name="url-project"]{
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78b99f', endColorstr='#4a7664',GradientType=0 ); 
 }
 .error{
-  border:1px solid #e0ad99;
+border: 1px solid #e0ac98 !important;
+}
+
+
+
+
+.block-info{
+  font-size: 15px;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.bl-error{
+  background: #f2cccd;
+  color: #f97e76;
+}
+.bl-success{
+  background: #b8e1ce;
+  color: #49bb7b;
+}
+.block-info-close{
+  float: right;
+  line-height: 1;
+  cursor: pointer
+}
+.block-info-title{
+  font-size: 25px;
+}
+.wrap-info-bl{
+  box-sizing: border-box;
+  position: absolute;
+  padding: 20px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  top:174px;
+  left: 0;
+  z-index: 100;
+  background: #eff3f7;
+}
+
+.error-message{
+    display: none;
+}
+.success-message{
+    display: none;
 }

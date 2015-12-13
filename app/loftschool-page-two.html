@@ -138,24 +138,27 @@
 		<div class="pop-up clearfix">
 				<div class="pop-up-header">Добавление проекта</div>
 				<form action="" id="forms">
+					<div class="error-message">
+						<span class="close-message"></span>
+					</div>
 					<a href="#" class="pop-up-close"></a>
                 	<div class="write-float write-float-one">
                     	<label for="name-p">Название проекта</label>
-                   		<input type="text" name="name-project" placeholder="Введите название" id="name-p" qtip-position="left" qtip-content="Введите название">
+                   		<input type="text" value="" name="name-project" placeholder="Введите название" id="name-p" qtip-position="left" qtip-content="Введите название">
                		</div>
 					<p class="popup-text-font">Картинка проекта</p>
 					<label class="file-upload">
         				<span class="button"></span>
-        				<mark class="mark-text">Загрузите изображение</mark>
-       					<input type="file" qtip-position="left" qtip-content="Вы не выбрали изображение">
+        				<mark class="mark-text" qtip-position="left" qtip-content="Вы не выбрали изображение">Загрузите изображение</mark>
+       					<input class="gofile" value="" type="file" >
    					</label>
                 	<div class="write-float write-float-three">
                     	<label for="url-p">URL проекта</label>
-                    	<input type="text" name="url-project" placeholder="Добавьте ссылку" id="url-p" qtip-position="left" qtip-content="Укажите ссылку на проект"> 
+                    	<input type="text" name="url-project" placeholder="Добавьте ссылку" id="url-p" qtip-position="left" value="" qtip-content="Укажите ссылку на проект"> 
                 	</div>
                 	<div class="write-textarea">
                    		<label for="about-project">Описание</label>
-                    	<textarea placeholder="Пара слов о Вашем проекте" rows="6" id="about-project" qtip-position="left" qtip-content="Введите описание проекта"></textarea>
+                    	<textarea placeholder="Пара слов о Вашем проекте" rows="6" id="about-project" qtip-position="left" value="" qtip-content="Введите описание проекта"></textarea>
                 	</div>
 						<input type="submit" value="Добавить" name="button-add">
 				</form>
@@ -163,9 +166,7 @@
 		<script type="text/javascript" src="bower/jquery/jquery.js"></script>
 		<script type="text/javascript" src="bower/qtip2/jquery.qtip.min.js"></script>
 		<script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
-		<script type="text/javascript" src="js/general.js"></script>
-		<script type="text/javascript" src="js/validation.js"></script>
-		<script type="text/javascript" src="js/form.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	    <script type="text/javascript" src="bower/bpopup/jquery.bpopup.js"></script>
 	</body>
 </html>

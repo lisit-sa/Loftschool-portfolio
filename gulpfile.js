@@ -15,4 +15,4 @@ gulp.task('watch', function() {
 		'app/js/**/*.js'
 	]).on('change', browserSync.reload);
 });
-gulp.task('default', ['server', 'watch']);
+gulp.task('default', ['server', 'watch']);//задача по умолчанию
