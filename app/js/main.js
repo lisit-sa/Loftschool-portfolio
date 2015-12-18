@@ -1,172 +1,142 @@
+var validation = (function() {
 
- /*----------TOOLTIPS-----------*/
-var validation = (function(){
-
-	var init = function(){
-		_setUpListners();
+/*-----Старт setUpListeners------*/ 
+	var init = function() {
+		_setUpListeners();
 	};
 
-	var _setUpListners = function(){
-		$('form').on('keydown', '.error', _removeError);
-		$('form').on('reset', clearForm);
+/*-----Прослушка-----*/
+	var _setUpListeners = function() {
+		$('#forms').on('keydown', '.error', _removeError);
+		$('#forms').on('reset', _clearForm);
 	};
 
-			var _removeError = function(){
-				$(this).removeClass('error');
-			};
-			
-			/*-----Очистка формы контакты----*/
-			var clearForm = function(form){
-				var form = $(this);
-				form.find('.login, .textarea, .email').trigger('hideTooltip');
-				form.find('.error').removeClass('error');
-			};
+/*------Убираем тултипы и клас error при очистке формы-----*/
+	var _clearForm = function (form) {
+		var form = $(this);
+		form.find('.validate').trigger('hideTooltip').removeClass('error');
+	};
 
-		var _createQtip = function(element, position){
-					if(position === 'right'){
-						position = {
-							my:'left center',
-							at:'right center'
-						}
-					}else{
-						position = {
-							my:'right center',
-							at:'left center',
-							adjust: {
-								method: 'shift none'
-							}
-						}
-					}
-				element.qtip({
-						content:{
-							text: function(){
-								return $(this).attr('qtip-content');
-							}
-						},
-						show:{
-							event:'show'
-						},
-						hide:{
-							event:'keydown hideTooltip'
-						},
-						position:position,
-						style:{
-							classes: 'qtip-rounded',
-							tip:{
-								height:10,
-								width:16
-							}
-						}
-				}).trigger('show');
+/*------Убираем класс error-----*/
+	var _removeError = function () {
+		$(this).removeClass('error');
+	};
 
-			};
-			var validateForm = function(form){
-
-
-				var elements = form.find('input, textarea, mark').not('input[type="file"]'),
-				valid = true;
-
-				$.each(elements, function(index, val){
-				var element = $(val),
-				val = element.val(),
-				pos = element.attr('qtip-position');
-
-
-
-				if(val.length === 0){
-					element.addClass('error');
-					_createQtip(element, pos);
-					valid = false;
+/*------Создаём тултипы------*/
+	var _createQtip = function (element, position) {
+		if (position === 'right') {
+			position = {
+				my: 'left center',
+				at: 'right center'
+			}
+		}else{
+			position = {
+				my: 'right center',
+				at: 'left center',
+				adjust: {
+					method: 'shift none'
 				}
-				});
-				return valid;
-			};
+			}
+		}
 
-			return{
-				init: init,
-				validateForm: validateForm,
-			};
-		})();
-		validation.init();
+/*------Добавляем тултипы-----*/
+		element.qtip({
+			content: {
+				text: function() {
+					return $(this).attr('qtip-content');
+				}
+			},
+			show: {
+				event: 'show'
+			},
+			hide: {
+				event: 'keydown onchange hideTooltip',
+			},
+			position: position,
+			style: {
+				classes: 'qtip-rounded',
+				tip: {
+					height:10,
+					width: 16
+				}
+			}
+		}).trigger('show');
+	};
 
+/*-------Валидируем формы------*/
+	var validateForm = function (form) {
 
-/*Lобавление картинки*/
-$(function(){
-    var wrapper = $( ".file-upload" ),
-        inp = wrapper.find( "input" ),
-        lbl = wrapper.find( "mark" );
+		var elements = form.find('.validate'),
+		valid = true;
 
-    var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+		$.each(elements, function(index, val) {
+			var element = $(val),
+				val = element.val(),
+				pos = element.attr("qtip-position");
 
-    lbl.change(function(){
+			if (val.length === 0) {
+				element.addClass('error');
+				_createQtip(element, pos);
+				valid = false;
+			}
+		});
 
-        var file_name;
-        if( file_api && inp[ 0 ].files[ 0 ] )
-            file_name = inp[ 0 ].files[ 0 ].name;
-        else
-            file_name = inp.val().replace( "C:\\fakepath\\", '' );
+		return valid;
+	};
 
-        if( ! file_name.length )
-            return;
+	return {
+		init: init,
+		validateForm: validateForm
+	};
+})();
 
-        if( lbl.is( ":visible" ) ){
-        	inp.text( file_name ),
-            lbl.text( file_name )
-            
-        }
-    }).change();
+validation.init();
 
-});
-// $( window ).resize(function(){
-//     $( ".file-upload input" ).triggerHandler( "change" );
-// });
+/*-----Поп-ап и загрузка файлов------*/
 
-/*POPUP*/
+var app = (function() {
 
-    var popup = (function(){
-        var popup;
-        $('.add').on('click', function(e){
-            e.preventDefault();
-            popup = $('.pop-up').bPopup({
-            speed: 650,
-            transition: 'slideDown',
-            transitionClose: 'slideDown',
-            modalColor:'#929181'
-        });
-        });
+/*-----Старт setUpListeners------*/ 
+	var init = function() {
+		_setUpListeners();
+	};
 
-/*Закрыть POPUP*/
+/*-----Прослушка-----*/
+	var _setUpListeners = function() { 
+		$('.add').on('click', _showModal); // Открываем поп-ап
+		$('#forms').on('submit', _addProject); // Кнопка добавить проект
+		$('#file-p').on('change', _showPath); // Показываем путь для загрузки файлов
+	};
 
-        $('.pop-up-close').on('click', function(e){
-            popup.close();
-        });
+/*------Загрузка файла-----*/
+	var _showPath = function(e) {
+		e.preventDefault();
+		
+		var filename = $("#filename"),
+			path = $("#file-p").val().replace(/\\/g, '/').replace(/.*\//, '');
+		
+		filename.val(path); 
 
-        var init = function(){
-        _setUpListners();
-        };
+		if (filename.hasClass('error')) {
+			filename.removeClass("error");
+			filename.qtip('hide');
+		}
+	};
 
-        var _setUpListners = function(){
-        $('.pop-up-close').on('click', _removeError);
-        $('.pop-up-close').on('click', clearForm);
-        };
+/*------Открываем и закрываем поп-ап------*/
+	var _showModal = function(e) { 
+		e.preventDefault();
 
-        var _removeError = function(){
-        $('input, textarea, mark').removeClass('error');
-        };
-
-        var clearForm = function(){
-        $('input, textarea, mark').trigger('hideTooltip');
-
-        };
-        
-        return{
-        init: init
-        };
-
-    })();
-   
-popup.init();
-
+		$('.pop-up').bPopup({
+			speed: 450,
+			transition: 'slideDown',
+			transitionClose: 'fadeIn',
+			onClose: function() {
+				$('#forms').trigger("reset");
+			}
+		});
+	};
+	
 /*-----Плэйсхолдеры для ИЕ 8------*/
 
  $(document).ready(function(){
@@ -175,33 +145,51 @@ popup.init();
         
  });
 
-/*----------Валидация формы----------*/
-  var contactMe = (function(){
+/*-----Отправляем проект-----*/
+	var _addProject = function(e) { 
+		e.preventDefault();
 
- 	var init = function(){
- 		_setUpListners();
- 	};
+		var form = $(this),
+			url = "",
+			defObj = _ajaxForm(form, url);
 
- 					var _setUpListners = function (){
- 						$('#forms').on('submit', _submitForm);
- 					};
+		if (defObj) {
+			defObj.done(function(ans) {
 
- 					var _submitForm = function(e){
- 						e.preventDefault();
+				var errorBox = form.find('#error');
 
- 							var form = $(this),
- 							url = 'contacts.php',
- 							defObj = _ajaxForm(form, url);
- 					};
+				if(ans.msg == 'OK') {
+					errorBox.hide();
+					successBox.show();
+				}else {
+					successBox.hide();
+					errorBox.show();
+				}
+			})
+		}
+	};
 
- 						var _ajaxForm = function(form, url){
- 							form.find('.error-message').text('Ошибка! Невозможно добавить проект').show();
- 							if(!validation.validateForm(form)) return false;
+	var _ajaxForm = function (form, url) { 
 
- 						};
- 							return{
- 								init:init
- 							}
- })();
+		form.find('.error-message').show();
+		if (!validation.validateForm(form)) {
+			return false;
+		}
 
- contactMe.init();
+	};
+
+	return {
+		init: init,
+	};
+
+})();
+
+app.init();
+
+/*----Закрыть error---*/
+var _errrorMes = $('#error');
+
+$('.close-message').click(function(event){
+	event.preventDefault();
+    _errrorMes.hide()
+});

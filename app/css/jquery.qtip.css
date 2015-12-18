@@ -102,9 +102,9 @@
 
 /* Default tooltip style */
 .qtip-default{
-	background-color: #D95252;
-	border-color: #D95252;
-	color: white;
+	background-color: #df8668;
+	border-color: #d8825e;
+	color: #9a4e32;
 }
 
 	.qtip-default .qtip-titlebar{
@@ -174,7 +174,7 @@
 /*! Red tooltip style */
 .qtip-red{
 	background-color: #F78B83;
-	border-color: #D95252;
+	border-color: #df8668;
 	color: #912323;
 }
 
@@ -187,11 +187,11 @@
 	}
 
 	.qtip-red .qtip-icon{
-		border-color: #D95252;
+		border-color: #df8668;
 	}
 
 	.qtip-red .qtip-titlebar .ui-state-hover{
-		border-color: #D95252;
+		border-color: #df8668;
 	}
 
 

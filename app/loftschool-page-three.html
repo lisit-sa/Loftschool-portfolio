@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="js/modernizr.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/jquery.qtip.css" />
 		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -74,15 +75,15 @@
 								<form method="post" id="forms" action="">
 									<div class="float float-one">
 										<label for="login">Имя</label>
-										<input type="text" value ="" name="login" class="login" placeholder="Как к Вам обращаться" id="login" qtip-position="left" qtip-content="Введите ваше имя">
+										<input type="text" class="validate" value ="" name="login" class="login" placeholder="Как к Вам обращаться" id="login" qtip-position="left" qtip-content="Введите ваше имя">
 									</div>
 									<div class="float float-two">
 										<label for="e-mail">Email</label>
-										<input type="text" value="" name="e-mail" class="email" placeholder="Куда мне писать" id="e-mail" qtip-position="right" qtip-content="Введите ваш Email">
+										<input type="text" class="validate" value="" name="e-mail" class="email" placeholder="Куда мне писать" id="e-mail" qtip-position="right" qtip-content="Введите ваш Email">
 									</div>
 									<div class="float-textarea">
 										<label for="letter">Сообщение</label>
-										<textarea class="textarea" value="" rows="9" id="letter" placeholder="Кратко в чем суть" qtip-position="left" qtip-content="Введите ваш текст"></textarea>
+										<textarea class="textarea validate" value="" rows="9" id="letter" placeholder="Кратко в чем суть" qtip-position="left" qtip-content="Введите ваш текст"></textarea>
 									</div>
 									<div class="g-recaptcha" data-sitekey="6LeWhxITAAAAALCQ1__CJFF-GcGZKOg1_WVZvWSb"></div>
 									<div class="write-buttons">

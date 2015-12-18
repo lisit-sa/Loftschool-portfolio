@@ -154,10 +154,14 @@
 .pop-up{
     margin-top: 10%;
     display: none;
+    margin-bottom: 250px;
 }
+
 .pop-up form{   
     width: 365px;
     min-height: 466px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-radius: 5px;
     border: 1px solid #c1c1c1;
     background: rgb(248,247,246); 
@@ -168,7 +172,7 @@
 }
 .pop-up-close{   
     float: right;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-right: 5px;
     width: 14px;
     height: 14px;
@@ -176,6 +180,10 @@
     background-repeat: no-repeat;
     cursor: pointer;
     text-decoration: none;
+    border: none;
+}
+.pop-up-close:active, .pop-up-close:focus{
+    outline: none;
 }
 .pop-up-header{
     font-family: 'open_sanslight';
@@ -184,17 +192,36 @@
     margin-bottom: 5px;
     margin-left: 20px;
 }
-.pop-up-close{   
+.error-message{
+    width: 318px;
+    background: #e9c8bc;
+    border: 1px solid #cb6945;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.error-one{
+    width: 275px;
+    float: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: #cb6945;
+    font-family: 'open_sanssemibold';
+    font-size: 16px;
+}
+.error-two{
+    float: left;
+    color: #cb6945;
+    font-family: 'open_sansregular';
+    font-size: 14px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+.close-message{
     float: right;
-    margin-top: 5px;
-    margin-right: 5px;
-    width: 14px;
-    height: 14px;
-    background: url("../img/close.png");
-    background-repeat: no-repeat;
-    cursor: pointer;
     text-decoration: none;
-    display: inline-block;
+    color: #cb6945;
+    margin-right: 5px;
 }
 .pop-up .write-float-one{
     float: left;
@@ -220,7 +247,7 @@
     font-size: 14px
 }
 .pop-up input[name="name-project"]{
-    min-width: 310px;
+    min-width: 305px;
     margin-top: 8px;
     margin-bottom: 5px;
     padding: 10px 5px 12px 10px;
@@ -237,7 +264,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f8f9', endColorstr='#f4f3f3',GradientType=0 ); /* IE6-9 */
 }
 .file-upload{
-    width:323px;
+    width:318px;
     margin-left:21px;
     display: block;
     position: relative;
@@ -246,7 +273,8 @@
     height: 40px;  
     border: 1px solid #d6d5d3;
     border-radius: 5px;   
-    float: left;             
+    float: left; 
+    cursor: pointer;            
 }
 .popup-text-font{
     display: block;
@@ -257,9 +285,10 @@
     margin-bottom: 10px;
     float: left;
 }
-.file-upload .button, .file-upload > .mark-text{
+.file-upload .button{
     display: block;
-    cursor: pointer            
+    cursor: pointer ;
+    z-index: 15;
 }
 .file-upload .button{
     float: right;
@@ -283,23 +312,17 @@
     margin-left: 15px;
     margin-top: 10px;
 }
-.file-upload mark{
-    background: inherit;    
-    color: #727070;
-    padding-left: 10px;
-    padding-top: 10px;
-    font-family: 'open_sanslight'; 
-}
 input[type=file]{
     position: absolute;
     top: 0;
+    z-index: 10;
     opacity: 0;
     -moz-opacity: 0;
     filter: alpha(opacity=0);
-    width:280px;
+    width:265px;
     height:44px;
     color: #727070;
-    width: 265px;
+    width: 260px;
     background: inherit;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7f8f9+0,f4f3f3+100 */
     background: rgb(247,248,249); /* Old browsers */
@@ -307,13 +330,21 @@ input[type=file]{
     background: -webkit-linear-gradient(top,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-.mark-text{
-    font-size:12px;
-    display: inline-block;
-    padding-bottom: 12px;
+.gofile{
+    position: absolute;
+    top:0;
+    width: 248px;
+    padding: 10px 5px 12px 10px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-
+    border: none;
+    cursor: pointer;
+    color: #727070;
+    background: rgb(247,248,249); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(247,248,249,1) 0%, rgba(244,243,243,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(247,248,249,1) 0%,rgba(244,243,243,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#e6e4e3',GradientType=0 ); /* IE6-9 */
 }
 input[name="url-project"]{
     min-width: 310px;
@@ -382,7 +413,7 @@ input[name="url-project"]{
     margin-left: 110px;
     text-decoration: none;
     outline: none;
-    margin-bottom: 250px;
+    
 }
 .pop-up input[name="button-add"]:active, .write-us input[name="send"]:focus {
     outline: none;
@@ -406,48 +437,6 @@ input[name="url-project"]{
 .error{
 border: 1px solid #e0ac98 !important;
 }
-
-
-
-
-.block-info{
-  font-size: 15px;
-  padding: 10px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-}
-.bl-error{
-  background: #f2cccd;
-  color: #f97e76;
-}
-.bl-success{
-  background: #b8e1ce;
-  color: #49bb7b;
-}
-.block-info-close{
-  float: right;
-  line-height: 1;
-  cursor: pointer
-}
-.block-info-title{
-  font-size: 25px;
-}
-.wrap-info-bl{
-  box-sizing: border-box;
-  position: absolute;
-  padding: 20px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  width: 100%;
-  top:174px;
-  left: 0;
-  z-index: 100;
-  background: #eff3f7;
-}
-
 .error-message{
-    display: none;
-}
-.success-message{
     display: none;
 }
