@@ -39,7 +39,7 @@ var validation = (function() {
 			}
 		}
 
-/*------Добавляем тултипы-----*/
+/*------Добавляем тултипы. Стили взяты из css qtip-----*/
 		element.qtip({
 			content: {
 				text: function() {
@@ -186,7 +186,7 @@ var app = (function() {
 
 app.init();
 
-/*----Закрыть error---*/
+/*----Закрыть блок error---*/
 var _errrorMes = $('#error');
 
 $('.close-message').click(function(event){

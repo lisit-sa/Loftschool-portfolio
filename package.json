@@ -4,6 +4,7 @@
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
     "gulp-concat-css": "^2.2.0",
+    "gulp-useref": "^3.0.4",
     "jquery-placeholder": "^2.1.1",
     "rimraf": "^2.4.4",
     "useref": "^1.1.0",
