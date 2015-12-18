@@ -2,17 +2,26 @@
 <html lang="ru-RU">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>Сайт-портфолио Карвановой Кристины</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=1201, initial-scale=1">
+		<!-- build:css css/vendor.min.css -->
 		<!-- bower:css -->
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css" />
 		<!-- endbower -->
+		<!-- endbuild -->
+
+		<!-- build:css css/main.min.css -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/style-three.css">
-		<link rel="stylesheet" href="css/stylesheet.css">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=1201, initial-scale=1">
-		<script type="text/javascript" src="js/modernizr.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/jquery.qtip.css" />
+		<!-- endbuild -->
+
+		<!-- build:css css/fonts.min.css -->
+		<link rel="stylesheet" href="css/stylesheet.css">
+		<!-- endbuild -->
+
+		<script type="text/javascript" src="js/modernizr.js"></script>
 		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	</head>
@@ -74,18 +83,18 @@
 						<div class="write-header">У Вас интересный проект? Напишите мне</div>
 						<div class="write-block">
 							<div class="write-block-center clearfix">
-								<form method="post" id="forms" action="">
+								<form method="post" id="forms">
 									<div class="float float-one">
 										<label for="login">Имя</label>
-										<input type="text" class="validate" value ="" name="login" class="login" placeholder="Как к Вам обращаться" id="login" qtip-position="left" qtip-content="Введите ваше имя">
+										<input type="text" class="validate login" value ="" name="login"  placeholder="Как к Вам обращаться" id="login" qtip-position="left" qtip-content="Введите ваше имя">
 									</div>
 									<div class="float float-two">
 										<label for="e-mail">Email</label>
-										<input type="text" class="validate" value="" name="e-mail" class="email" placeholder="Куда мне писать" id="e-mail" qtip-position="right" qtip-content="Введите ваш Email">
+										<input type="text" class="validate email" value="" name="e-mail"  placeholder="Куда мне писать" id="e-mail" qtip-position="right" qtip-content="Введите ваш Email">
 									</div>
 									<div class="float-textarea">
 										<label for="letter">Сообщение</label>
-										<textarea class="textarea validate" value="" rows="9" id="letter" placeholder="Кратко в чем суть" qtip-position="left" qtip-content="Введите ваш текст"></textarea>
+										<textarea class="textarea validate"  rows="9" id="letter" placeholder="Кратко в чем суть" qtip-position="left" qtip-content="Введите ваш текст"></textarea>
 									</div>
 									<div class="g-recaptcha" data-sitekey="6LeWhxITAAAAALCQ1__CJFF-GcGZKOg1_WVZvWSb"></div>
 									<div class="write-buttons">
@@ -107,14 +116,16 @@
 				<p class="footer-my-site">&#169;2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его.</p>
 			</div>
 		</footer>
+		<!-- build:js js/vendor.js -->
 		<!-- bower:js -->
 		<script src="bower/jquery/jquery.js"></script>
 		<script src="bower/bpopup/jquery.bpopup.js"></script>
 		<script src="bower/qtip2/jquery.qtip.js"></script>
 		<script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
 		<!-- endbower -->
-		<script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
+		<!-- endbuild -->
+		<!-- build:js js/main.js -->
 		<script type="text/javascript" src="js/main.js"></script>
-
+		<!-- endbuild -->
 	</body>
 </html>

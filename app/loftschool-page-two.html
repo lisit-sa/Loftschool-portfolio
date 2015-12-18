@@ -2,17 +2,27 @@
 <html lang="ru-RU">
 	<head>
 		<meta charset="UTF-8">
-		<title>Document</title>
+		<title>Сайт-портфолио Карвановой Кристины</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=1201, initial-scale=1">
+		<!-- build:css css/vendor.min.css -->
 		<!-- bower:css -->
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css" />
 		<!-- endbower -->
+		<!-- endbuild -->
+
+		<!-- build:css css/main.min.css -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/style-two.css">
-		<link rel="stylesheet" href="css/stylesheet.css">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=1201, initial-scale=1">
-		<script type="text/javascript" src="js/modernizr.js"></script>
 		<link type="text/css" rel="stylesheet" href="css/jquery.qtip.css" />
+		<!-- endbuild -->
+
+		<!-- build:css css/fonts.min.css -->
+		<link rel="stylesheet" href="css/stylesheet.css">
+		<!-- endbuild -->
+
+		<script type="text/javascript" src="js/modernizr.js"></script>
+		
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	</head>
 	<body>
@@ -141,7 +151,7 @@
 		<div class="pop-up clearfix">
 			<div class="pop-up-header">Добавление проекта</div>
 			<button type="button" class="pop-up-close b-close"></button>
-			<form action="" id="forms">
+			<form action="#" id="forms">
 				<div class="error-message clearfix" id="error">
 					<a href="" class="close-message">x</a>
 					<span class="error-one">Ошибка!</span>
@@ -152,30 +162,32 @@
 					<input type="text" class="validate" value="" name="name-project" placeholder="Введите название" id="name-p" qtip-position="left" qtip-content="введите название">
 				</div>
 				<p class="popup-text-font">Картинка проекта</p>
-				<label class="file-upload">
+				<div class="file-upload">
 					<span class="button"></span>
 					<input type="file" class="file-go" name="file-project" id="file-p" >
 					<input type="text" class="gofile validate" placeholder="Загрузите изображение" id="filename" qtip-position="left" value="" qtip-content="изображение">
-				</label>
+				</div>
 				<div class="write-float write-float-three">
 					<label for="url-p">URL проекта</label>
 					<input type="text" class="validate" name="url-project" placeholder="Добавьте ссылку" id="url-p" qtip-position="left" value="" qtip-content="ссылка на проект">
 				</div>
 				<div class="write-textarea">
 					<label for="about-project">Описание</label>
-					<textarea class="validate" placeholder="Пара слов о Вашем проекте" rows="6" id="about-project" qtip-position="left" value="" qtip-content="описание проекта"></textarea>
+					<textarea class="validate" placeholder="Пара слов о Вашем проекте" rows="6" id="about-project" qtip-position="left" qtip-content="описание проекта"></textarea>
 				</div>
 				<input type="submit" value="Добавить" name="button-add">
 			</form>
 		</div>
+		<!-- build:js js/vendor.js -->
 		<!-- bower:js -->
 		<script src="bower/jquery/jquery.js"></script>
 		<script src="bower/bpopup/jquery.bpopup.js"></script>
 		<script src="bower/qtip2/jquery.qtip.js"></script>
 		<script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
 		<!-- endbower -->
-		<script src="bower/jquery-placeholder/jquery.placeholder.js"></script>
+		<!-- endbuild -->
+		<!-- build:js js/main.js -->
 		<script type="text/javascript" src="js/main.js"></script>
-
+		<!-- endbuild -->
 	</body>
 </html>
