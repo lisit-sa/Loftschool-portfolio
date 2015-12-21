@@ -82,6 +82,7 @@ var validation = (function() {
 		});
 
 		return valid;
+
 	};
 
 	return {
@@ -170,13 +171,20 @@ var app = (function() {
 	};
 
 	var _ajaxForm = function (form, url) { 
-
-		form.find('.error-message').show();
+		
 		if (!validation.validateForm(form)) {
-			return false;
-		}
+			form.find('.error-message').show();
+		}else{
+			$('.pop-up').bPopup().close(),
+			$('.success-message').bPopup({
+			speed: 450,
+			transition: 'slideDown'
+		});
+		};
+
 
 	};
+
 
 	return {
 		init: init,

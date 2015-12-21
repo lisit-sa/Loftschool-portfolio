@@ -220,8 +220,48 @@
 .close-message{
     float: right;
     text-decoration: none;
-    color: #cb6945;
     margin-right: 5px;
+}
+.red{
+    color: #cb6945;
+}
+.green{
+    color: #7d7b7b;
+}
+.success-message {
+    display: none;
+    width: 363px;
+    min-height: 104px;
+    border-radius: 5px;
+    background: #f0efee;
+}
+.success-wrapper{
+    width: 321px;
+    min-height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background: #bde2cc;
+    border: 1px solid #49bb7b;
+}
+.success-one{
+    width: 275px;
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    color: #49bb7b;
+    font-family: 'open_sanssemibold';
+    font-size: 16px;
+}
+.success-two{
+    display: block;
+    float: left;
+    color: #49bb7b;
+    font-family: 'open_sansregular';
+    font-size: 14px;
+    padding-left: 10px;
+    margin-bottom: 10px;
 }
 .pop-up .write-float-one{
     float: left;
