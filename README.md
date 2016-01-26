@@ -1,3 +1,5 @@
+Проект моего сайта-портфолио ( http://kristaliska-web.ru/ )
+
 Инструкция для установки:
 
 1. git clone https://github.com/lisit-sa/Loftschool-portfolio.git site
