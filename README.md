@@ -1,4 +1,4 @@
-The first project of my portfolio site, homework from HTML Academy
+The first project of my portfolio site, homework from Loftschool
 
 Installation:
 
