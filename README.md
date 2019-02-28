@@ -1,6 +1,6 @@
-Проект моего сайта-портфолио ( http://kristaliska-web.ru/ )
+The first project of my portfolio site, homework from HTML Academy
 
-Инструкция для установки:
+Installation:
 
 1. git clone https://github.com/lisit-sa/Loftschool-portfolio.git site
 2. cd site
